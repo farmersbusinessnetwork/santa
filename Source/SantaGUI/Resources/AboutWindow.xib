@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SNTAboutWindowController">
@@ -13,31 +14,20 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Santa" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
+        <window title="FBN IT Support" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="196" y="240" width="480" height="200"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-ZS-kXw">
-                        <rect key="frame" x="199" y="140" width="83" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="UK2-2L-lPx"/>
-                            <constraint firstAttribute="width" constant="79" id="lDf-D7-qlY"/>
-                        </constraints>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Santa" id="VVj-gU-bzy">
-                            <font key="font" size="34" name="HelveticaNeue-UltraLight"/>
-                            <color key="textColor" red="0.1869618941" green="0.1869618941" blue="0.1869618941" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uh6-q0-RzL">
                         <rect key="frame" x="18" y="65" width="444" height="60"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="CcT-ul-1eA">
                             <font key="font" metaFont="system"/>
-                            <string key="title">Santa is an application whitelisting system for macOS.
+                            <string key="title">This is an FBN application whitelisting system for macOS.
 
 There are no user-configurable settings.</string>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -77,10 +67,8 @@ DQ
                 <constraints>
                     <constraint firstItem="Udo-BY-n7e" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" priority="900" constant="191" id="1T4-DB-Dz8"/>
                     <constraint firstItem="SRu-Kf-vu5" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="136" id="Ake-nU-qhW"/>
-                    <constraint firstItem="BnL-ZS-kXw" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="Fj1-SG-mzF"/>
                     <constraint firstAttribute="bottom" secondItem="Udo-BY-n7e" secondAttribute="bottom" constant="28" id="bpF-hC-haN"/>
                     <constraint firstAttribute="bottom" secondItem="SRu-Kf-vu5" secondAttribute="bottom" constant="28" id="fCB-02-SEt"/>
-                    <constraint firstItem="BnL-ZS-kXw" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="kez-S0-6Gg"/>
                     <constraint firstItem="Udo-BY-n7e" firstAttribute="leading" secondItem="SRu-Kf-vu5" secondAttribute="trailing" constant="11" id="sYO-yY-w9w"/>
                 </constraints>
             </view>
