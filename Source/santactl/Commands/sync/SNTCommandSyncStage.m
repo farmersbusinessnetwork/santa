@@ -21,6 +21,7 @@
 #import "SNTCommandSyncState.h"
 #import "SNTLogging.h"
 #import "SNTXPCControlInterface.h"
+#import "SNTSign.h"
 
 @interface SNTCommandSyncStage ()
 
@@ -144,8 +145,15 @@
   __block NSHTTPURLResponse *_response;
   __block NSError *_error;
 
+  NSMutableURLRequest* req_copy = [request mutableCopy];
+
+  NSString* auth_header_value = [Signing generate_signed_request_header:request];
+  if(auth_header_value) {
+    [req_copy setValue:auth_header_value forHTTPHeaderField:@"FBN-Auth"];
+  }
+  
   dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-  NSURLSessionDataTask *task = [self.urlSession dataTaskWithRequest:request
+  NSURLSessionDataTask *task = [self.urlSession dataTaskWithRequest:req_copy
                                                   completionHandler:^(NSData *data,
                                                                       NSURLResponse *response,
                                                                       NSError *error) {

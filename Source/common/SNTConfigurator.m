@@ -43,6 +43,7 @@ static NSString *const kMobileConfigDomain = @"com.google.santa";
 
 /// The keys managed by a mobileconfig.
 static NSString *const kSyncBaseURLKey = @"SyncBaseURL";
+static NSString *const kClientAuthSigningSecretKey = @"ClientAuthSigningSecretKey";
 static NSString *const kClientAuthCertificateFileKey = @"ClientAuthCertificateFile";
 static NSString *const kClientAuthCertificatePasswordKey = @"ClientAuthCertificatePassword";
 static NSString *const kClientAuthCertificateCNKey = @"ClientAuthCertificateCN";
@@ -117,6 +118,7 @@ static NSString *const kSyncCleanRequired = @"SyncCleanRequired";
       kModeNotificationMonitor : string,
       kModeNotificationLockdown : string,
       kSyncBaseURLKey : string,
+      kClientAuthSigningSecretKey: string,
       kClientAuthCertificateFileKey : string,
       kClientAuthCertificatePasswordKey : string,
       kClientAuthCertificateCNKey : string,
@@ -389,6 +391,10 @@ static NSString *const kSyncCleanRequired = @"SyncCleanRequired";
 
 - (NSString *)modeNotificationLockdown {
   return self.configState[kModeNotificationLockdown];
+}
+
+- (NSString *)syncClientAuthSigningSecret {
+    return self.configState[kClientAuthSigningSecretKey];
 }
 
 - (NSString *)syncClientAuthCertificateFile {

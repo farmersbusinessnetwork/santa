@@ -223,6 +223,11 @@
 #pragma mark Client Auth Settings
 
 ///
+///  If set, this contains the secret key used for HMAC signing of headers and body of sync call
+///
+@property(readonly, nonatomic) NSString *syncClientAuthSigningSecret;
+
+///
 ///  If set, this contains the location of a PKCS#12 certificate to be used for sync authentication.
 ///
 @property(readonly, nonatomic) NSString *syncClientAuthCertificateFile;

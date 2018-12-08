@@ -41,7 +41,7 @@ static const NSUInteger kTransitiveRuleExpirationSeconds = 6 * 30 * 24 * 3600;
 
 - (NSArray *)criticalSystemBinaryPaths {
   return @[
-    @"/usr/libexec/trustd", @"/usr/sbin/securityd", @"/usr/libexec/xpcproxy", @"/usr/sbin/ocspd"
+    @"/usr/libexec/trustd", @"/usr/sbin/securityd", @"/usr/libexec/xpcproxy", @"/usr/sbin/ocspd", @"/usr/local/bin/jamf"
   ];
 }
 
